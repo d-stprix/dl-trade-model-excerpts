@@ -7,15 +7,15 @@ Contains most of the code involved in hyperparameter tuning of the deep learning
 4)	Shuffling the dataset (NumPy arrays at this point) and separating features from labels.
 5)	Defining KerasTuner’s Bayesian Optimization tuner.
 6)	Run the search. For each trial:
-a.	 Build model (and a duplicate Monte Carlo version that has permanently-enabled dropout layers) with hyperparameters specified by tuner.
-b.	Define custom-built callbacks (early stopping, learning rate scheduler, learning rate and loss plotters) found in custom_callbacks.py.
-c.	Wrap dataset by tf.data.Dataset objects (done at the start of every trial since the batch size is a hyperparameter).
-d.	Run custom training loop found in custom_loop.py.
-e.	Save the more profitable model (and Monte Carlo duplicate) weights if the model is profitable with respect to the validation set at the end of any epoch.
+    - Build model (and a duplicate Monte Carlo version that has permanently-enabled dropout layers) with hyperparameters specified by tuner.
+    - Define custom-built callbacks (early stopping, learning rate scheduler, learning rate and loss plotters) found in custom_callbacks.py.
+    - Wrap dataset by tf.data.Dataset objects (done at the start of every trial since the batch size is a hyperparameter).
+    - Run custom training loop found in custom_loop.py.
+    - Save the more profitable model (and Monte Carlo duplicate) weights if the model is profitable with respect to the validation set at the end of any epoch.
 
 Training analysis:
 -	Metrics are logged at the end of each epoch and plotted using TensorBoard.
 -	Several batches in each trial are profiled for detailed performance information and the trace.
   
-Refer to the Wiki for additional information.
+**Refer to the Wiki for additional information.**
 
