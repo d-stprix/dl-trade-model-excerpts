@@ -1,4 +1,6 @@
-# dl-trade-model-excerpts
+# End-to-End Deep Learning Project for Stock Trading      
+
+**This readme provides a brief explanation of the functions carried out by the modules. Refer to the wiki for a description of the project, objectives, and implementation details.**
 
 Contains most of the code involved in hyperparameter tuning of the deep learning models. The entire process is run by executing model_selector.py. The main steps are:
 1)	Selecting a model architecture from hypermodels.py (not included)
@@ -17,5 +19,4 @@ Training analysis:
 -	Metrics are logged at the end of each epoch and plotted using TensorBoard.
 -	Several batches in each trial are profiled for detailed performance information and the trace.
   
-**Refer to the Wiki for additional information.**
 
