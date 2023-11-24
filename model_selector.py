@@ -41,11 +41,11 @@ warnings.filterwarnings('ignore', category=UserWarning, message='.*Converting sp
 
 MAX_EPOCHS = 60
 SAMPLE = 0  # samples: 0 = full dataset, 1 = first 100k instances, 2 = first 10k instances.
-NEW_EXPERIMENT = True  # Have option to delete files from previous trials.in
+NEW_EXPERIMENT = True  # Have option to delete files from previous trials.
 INTRADAY_LENGTH = 128  # Look-back period.
 DAILY_LENGTH = 128  # For daily candles.
 NUM_GPUS = 2
-START_LR = 2e-4  # Automatically scales values for Adagrad and Adadelta.
+START_LR = 2e-4  # Automatically scales values for Adadelta.
 PROFILE = True
 DEBUG = False
 
